@@ -23,8 +23,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:front": "react-scripts start",
+    "start": "yarn build && yarn main-server",
     "run-server": "nodemon -r esm server.js",
+    "main-server": "node -r esm server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

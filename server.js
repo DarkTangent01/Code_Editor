@@ -1,5 +1,6 @@
 import express from 'express'
 import http from 'http'
+import path from 'path';
 import { Server } from 'socket.io'
 import { APP_PORT, APP_IP_ADDRESS } from './config'
 import ACTIONS from './src/Actions';
@@ -7,6 +8,11 @@ import ACTIONS from './src/Actions';
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+
+app.use(express.static('build'));
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
 
 const userSocketMap = {};
 
