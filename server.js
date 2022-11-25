@@ -62,6 +62,6 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = APP_PORT || 443;
+const PORT = process.env.PORT || 443;
 
 server.listen(PORT, () => console.log(`[+] Listning on ${PORT}`));
