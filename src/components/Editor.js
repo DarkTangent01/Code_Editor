@@ -37,6 +37,7 @@ const Editor = ({ socketRef, roomId, OnCodeChange }) => {
 
         }
         init();
+        // eslint-disable-next-line
     }, []);
 
     useEffect(() => {
@@ -50,8 +51,10 @@ const Editor = ({ socketRef, roomId, OnCodeChange }) => {
         return () => {
             socketRef.current.off(ACTIONS.CODE_CHANGE)
         }
+        // eslint-disable-next-line
     }, [socketRef.current]);
+
     return <textarea id="realtimeEditor"></textarea>;
 }
-
+// eslint-disable-next-line
 export default Editor

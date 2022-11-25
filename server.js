@@ -62,5 +62,6 @@ io.on('connection', (socket) => {
     });
 });
 
+const PORT = APP_PORT || 5000;
 
-server.listen(APP_PORT, () => console.log(`[+] Listning on http://${APP_IP_ADDRESS}:${APP_PORT}/`));
+server.listen(PORT, () => console.log(`[+] Listning on ${PORT}/`));

@@ -59,6 +59,7 @@ const EditorPage = () => {
       socketRef.current.off(ACTIONS.JOINED);
       socketRef.current.off(ACTIONS.DISCONNECTED);
     }
+    // eslint-disable-next-line
   }, []);
 
   async function copyRoomId() {
