@@ -2,7 +2,7 @@ import express from 'express'
 import http from 'http'
 import path from 'path';
 import { Server } from 'socket.io'
-import { APP_PORT, APP_IP_ADDRESS } from './config'
+import { APP_PORT} from './config'
 import ACTIONS from './src/Actions';
 
 const app = express();
